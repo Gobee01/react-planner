@@ -116,9 +116,8 @@ export default function Viewer2D(_ref, _ref2) {
 const Viewer=useRef(null)
   useEffect(()=>{
 
-    // Viewer.current.zoom(centerX,centerY,zoom);
-    projectActions.updateZoomScale(zoom);
-    // console.log('VIEWER ',Viewer.current)
+    Viewer.current.zoom(centerX,centerY,zoom);
+    console.log('VIEWER ',Viewer.current)
 
   },[zoom])
   var mapCursorPosition = function mapCursorPosition(_ref3) {
@@ -303,6 +302,7 @@ const Viewer=useRef(null)
   };
 
   var onChangeValue = function onChangeValue(value) {
+    value.a = zoom;
     projectActions.updateZoomScale(value.a);
     console.log('VALUE ',value)
     return viewer2DActions.updateCameraView(value);
