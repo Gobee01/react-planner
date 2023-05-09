@@ -122,10 +122,10 @@ export default function Viewer2D(_ref, _ref2) {
   // },[zoom])
 
   useEffect(() => {
-    if (zoom) {
-      viewer2DActions.updateCameraView({ a: zoom, b: 0, c: 0, d: zoom, e: 0, f: 0 });
+    if (zoom && centerX) {
+      viewer2DActions.updateCameraView({ a: zoom, b: 0, c: 0, d: zoom, e: centerX, f: centerX });
     }
-  }, [zoom]);
+  }, [zoom, centerX]);
   
   var mapCursorPosition = function mapCursorPosition(_ref3) {
     var x = _ref3.x,
