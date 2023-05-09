@@ -114,12 +114,18 @@ export default function Viewer2D(_ref, _ref2) {
 
   var layerID = scene.selectedLayer;
 
-  const Viewer=useRef(null)
-  useEffect(()=>{
-    Viewer.current.zoom(centerX,centerY,zoom);
-    console.log('VIEWER ',Viewer.current)
+  // const Viewer=useRef(null)
+  // useEffect(()=>{
+  //   Viewer.current.zoom(centerX,centerY,zoom);
+  //   console.log('VIEWER ',Viewer.current)
 
-  },[zoom])
+  // },[zoom])
+
+  useEffect(() => {
+    if (viewer2DActions && zoom) {
+      viewer2DActions.updateCameraView({ a: zoom, b: 0, c: 0, d: zoom, e: 0, f: 0 });
+    }
+  }, [viewer2DActions, zoom]);
   
   var mapCursorPosition = function mapCursorPosition(_ref3) {
     var x = _ref3.x,
@@ -409,8 +415,7 @@ export default function Viewer2D(_ref, _ref2) {
         background:'white',
         miniatureBackground:'white',
         miniaturePosition: 'none',
-        toolbarPosition: 'none',
-        ref: Viewer
+        toolbarPosition: 'none'
 
       },
       React.createElement(
