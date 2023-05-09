@@ -302,7 +302,7 @@ const Viewer=useRef(null)
   };
 
   var onChangeValue = function onChangeValue(value) {
-    value.a = zoom;
+    value.a = zoom ? zoom : 0.5;
     projectActions.updateZoomScale(value.a);
     console.log('VALUE ',value)
     return viewer2DActions.updateCameraView(value);
