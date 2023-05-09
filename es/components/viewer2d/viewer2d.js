@@ -117,8 +117,6 @@ const Viewer=useRef(null)
   useEffect(()=>{
 
     Viewer.current.zoom(centerX,centerY,zoom);
-    Viewer.current.setPointOnViewerCenter(centerX,centerY,zoom)
-    Viewer.current.zoomOnViewerCenter(zoom)
     console.log('VIEWER ',Viewer.current)
 
   },[zoom])
