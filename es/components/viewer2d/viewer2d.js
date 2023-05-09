@@ -302,7 +302,7 @@ const Viewer=useRef(null)
   };
 
   var onChangeValue = function onChangeValue(value) {
-    projectActions.updateZoomScale(value.a);
+    // projectActions.updateZoomScale(value.a);
     console.log('VALUE ',value)
     return viewer2DActions.updateCameraView(value);
   };
