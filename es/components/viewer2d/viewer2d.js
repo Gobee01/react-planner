@@ -116,8 +116,10 @@ export default function Viewer2D(_ref, _ref2) {
 const Viewer=useRef(null)
   useEffect(()=>{
 
-    console.log(Viewer.current)
     Viewer.current.zoom(centerX,centerY,zoom);
+    Viewer.current.setPointOnViewerCenter(centerX,centerY,zoom)
+    Viewer.current.zoomOnViewerCenter(zoom)
+    console.log('VIEWER ',Viewer.current)
 
   },[zoom])
   var mapCursorPosition = function mapCursorPosition(_ref3) {
@@ -303,6 +305,7 @@ const Viewer=useRef(null)
 
   var onChangeValue = function onChangeValue(value) {
     projectActions.updateZoomScale(value.a);
+    console.log('VALUE ',value)
     return viewer2DActions.updateCameraView(value);
   };
 
@@ -408,7 +411,8 @@ const Viewer=useRef(null)
         miniatureBackground:'white',
         miniaturePosition: 'none',
         toolbarPosition: 'none',
-        ref: Viewer
+        ref: Viewer,
+        autoFocus: true
 
       },
       React.createElement(
