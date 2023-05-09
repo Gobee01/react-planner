@@ -117,6 +117,8 @@ const Viewer=useRef(null)
   useEffect(()=>{
 
     Viewer.current.zoom(centerX,centerY,zoom);
+    projectActions.updateZoomScale(zoom);
+    console.log('ACTIONS REF',projectActions)
     console.log('VIEWER ',Viewer.current)
 
   },[zoom])
@@ -302,8 +304,8 @@ const Viewer=useRef(null)
   };
 
   var onChangeValue = function onChangeValue(value) {
-    projectActions.updateZoomScale(value.a);
-    console.log('VALUE ',value)
+    // projectActions.updateZoomScale(value.a);
+    console.log('ACTIONS ',projectActions)
     return viewer2DActions.updateCameraView(value);
   };
 
@@ -409,8 +411,7 @@ const Viewer=useRef(null)
         miniatureBackground:'white',
         miniaturePosition: 'none',
         toolbarPosition: 'none',
-        ref: Viewer,
-        autoFocus: true
+        ref: Viewer
 
       },
       React.createElement(
