@@ -113,13 +113,14 @@ export default function Viewer2D(_ref, _ref2) {
 
 
   var layerID = scene.selectedLayer;
-const Viewer=useRef(null)
-  useEffect(()=>{
 
+  const Viewer=useRef(null)
+  useEffect(()=>{
     Viewer.current.zoom(centerX,centerY,zoom);
-    console.log('VIEWER ',Viewer.current)
+    console.log('VIEWER ',viewer2D.toJS())
 
   },[zoom])
+  
   var mapCursorPosition = function mapCursorPosition(_ref3) {
     var x = _ref3.x,
         y = _ref3.y;
