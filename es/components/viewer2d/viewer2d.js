@@ -123,7 +123,7 @@ export default function Viewer2D(_ref, _ref2) {
 
   useEffect(() => {
     if (zoom) {
-      viewer2DActions.updateCameraView({ a: zoom, b: 0, c: 0, d: zoom, e: 161, f: 161 });
+      viewer2DActions.updateCameraView({ a: zoom, b: 0, c: 0, d: zoom, e: 0, f: 0 });
     }
   }, [zoom]);
   
