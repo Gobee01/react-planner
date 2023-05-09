@@ -118,7 +118,6 @@ const Viewer=useRef(null)
 
     Viewer.current.zoom(centerX,centerY,zoom);
     projectActions.updateZoomScale(zoom);
-    console.log('ACTIONS REF',projectActions)
     console.log('VIEWER ',Viewer.current)
 
   },[zoom])
@@ -305,7 +304,7 @@ const Viewer=useRef(null)
 
   var onChangeValue = function onChangeValue(value) {
     // projectActions.updateZoomScale(value.a);
-    console.log('ACTIONS ',projectActions)
+    console.log('VALUE ',value)
     return viewer2DActions.updateCameraView(value);
   };
 
