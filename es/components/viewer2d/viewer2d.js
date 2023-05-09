@@ -117,7 +117,7 @@ const Viewer=useRef(null)
   useEffect(()=>{
 
     Viewer.current.zoom(centerX,centerY,zoom);
-    console.log('VIEWER ',Viewer.current)
+    console.log('VIEWER ',viewer2D)
 
   },[zoom])
   var mapCursorPosition = function mapCursorPosition(_ref3) {
