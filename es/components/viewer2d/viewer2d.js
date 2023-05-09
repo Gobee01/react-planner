@@ -411,7 +411,8 @@ export default function Viewer2D(_ref, _ref2) {
         miniaturePosition: 'none',
         toolbarPosition: 'none',
         ref: Viewer,
-        zoom: zoom
+        a: zoom,
+        d: zoom
 
       },
       React.createElement(
