@@ -195,8 +195,8 @@ export default function Viewer2D(_ref, _ref2) {
     var _mapCursorPosition2 = mapCursorPosition(viewerEvent),
         x = _mapCursorPosition2.x,
         y = _mapCursorPosition2.y;
-        console.log("x=",_mapCursorPosition2.x)
-        console.log("y=",_mapCursorPosition2.y)
+        console.log("xx=",_mapCursorPosition2.x)
+        console.log("yy=",_mapCursorPosition2.y)
 
     if (mode === constants.MODE_IDLE) {
       var elementData = extractElementData(event.target);
