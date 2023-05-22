@@ -201,7 +201,7 @@ export default function Viewer2D(_ref, _ref2) {
         y = _mapCursorPosition2.y;
         console.log("xx=",_mapCursorPosition2.x)
         console.log("yy=",_mapCursorPosition2.y)
-        cursorPosition({x, y})
+        // cursorPosition({x, y})
 
     if (mode === constants.MODE_IDLE) {
       var elementData = extractElementData(event.target);
