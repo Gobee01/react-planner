@@ -7,6 +7,10 @@ import State from './state';
 import * as SharedStyle from '../../shared-style';
 import { RulerX, RulerY } from './export';
 
+export function cursorPosition({ x, y }) {
+  return { x: x, y: y };
+}
+
 function mode2Tool(mode) {
   switch (mode) {
     case constants.MODE_2D_PAN:
@@ -197,6 +201,7 @@ export default function Viewer2D(_ref, _ref2) {
         y = _mapCursorPosition2.y;
         console.log("xx=",_mapCursorPosition2.x)
         console.log("yy=",_mapCursorPosition2.y)
+        cursorPosition({x, y})
 
     if (mode === constants.MODE_IDLE) {
       var elementData = extractElementData(event.target);
