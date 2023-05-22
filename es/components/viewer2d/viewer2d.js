@@ -7,9 +7,9 @@ import State from './state';
 import * as SharedStyle from '../../shared-style';
 import { RulerX, RulerY } from './export';
 
-export function cursorPosition({ x, y }) {
-  return { x: x, y: y };
-}
+// export function cursorPosition({ x, y }) {
+//   return { x: x, y: y };
+// }
 
 function mode2Tool(mode) {
   switch (mode) {
